@@ -1,24 +1,21 @@
 /*
 7. Remove the skill with the name "Kotlin" from the skills array.
 */
-// db.test.find({
+// db.practiceDB.find({
 //     "skills.name": 'KOTLIN'
 // }).project({ skills: 1 })
 
-// db.test.updateMany({}, {
+// db.practiceDB.updateMany({}, {
 //     $pull: {
 //         'skills.name': 'KOTLIN'
 //     }
 // })
 
-
-db.persons.updateMany(
+db.practiceDB.updateMany(
     {},
     {
-        $pull:
-        {
-            skills:
-                { name: "Kotlin" }
-        }
-    }
-)
+        $pull: {
+            skills: { name: "Kotlin" },
+        },
+    },
+);
